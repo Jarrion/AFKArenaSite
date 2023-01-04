@@ -70,8 +70,8 @@ function generateHeroes(numHeroes, rarityString, names) {
   }
 }
 
-// Generate 10 heroes with rarities determined by the string 'crrleeccrl' and names pulled from the heroNames array
+// Generate 10 heroes with rarities determined by the string 'aedfghalef' and names pulled from the heroNames array
 generateHeroes(10, 'aedfghalef', heroNames);
 
-console.log(heroes); // Outputs an array of 10 hero objects with rarities 'rare', 'rare', 'rare', 'legendary', 'legendary', 'common', 'common', 'common', 'rare', 'legendary' and names 'Superman', 'Batman', 'Wonder Woman', 'Green Lantern', 'Flash', 'Superman', 'Batman', 'Wonder Woman', 'Green Lantern', 'Flash'
+console.log(heroes); // Outputs an array of 10 hero objects with respective rarities
 
