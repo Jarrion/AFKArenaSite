@@ -1,7 +1,10 @@
 const heroes = [];
 const heroNames = ['Belinda', 'Cecilia', 'Eluard', 'Estrilda', 'Fawkes', 'Gwyneth', 'Hendrik', 'Lucius', 'Morrow', 'Oscar'];
 
-function generateHeroes(numHeroes, rarityString, names) {
+function generateHeroes() {
+  const rarityString = document.getElementById('rarity-string').value;
+  const numHeroes = rarityString.length;
+
   for (let i = 0; i < numHeroes; i++) {
     let rarity;
     let obtained;
@@ -74,22 +77,33 @@ function generateHeroes(numHeroes, rarityString, names) {
         color = 'gray';
         break;
     }
-
+    
     const hero = {
       id: i + 1,
-      name: names[i % names.length],
+      name: heroNames[i % heroNames.length],
       obtained: obtained,
       rarity: rarity,
       color: color,
-      img:'images/' + names[i % names.length] + '.webp'
+      img:'images/' + heroNames[i % heroNames.length] + '.webp'
     };
-    
     heroes.push(hero);
   }
-}
 
-// Generate 10 heroes with rarities determined by the string 'aedfghalef' and names pulled from the heroNames array
-generateHeroes(151, 'aedfghalef', heroNames);
+  const container = document.querySelector('.grid-container');
+
+  heroes.forEach((hero, index) => {
+  const heroDiv = document.createElement('div');
+  heroDiv.classList.add('hero');
+  heroDiv.style.backgroundColor = hero.color;
+  heroDiv.innerHTML = `
+    <img src='${hero.img}' alt='${hero.name}'>
+    <p>${hero.name}</p>
+  `;
+  container.appendChild(heroDiv);
+
+});
+
+}
 
 console.log(heroes); // Outputs an array of 10 hero objects with respective rarities
 
@@ -99,10 +113,8 @@ heroes.forEach((hero, index) => {
   const heroDiv = document.createElement('div');
   heroDiv.classList.add('hero');
   heroDiv.style.backgroundColor = hero.color;
-  heroDiv.innerHTML = `
-    <img src='${hero.img}' alt='${hero.name}'>
-    <p>${hero.name}</p>
-  `;
+  heroDiv.innerHTML = `<img src='${hero.img}' alt='${hero.name}'><p>${hero.name}</p>`;
   container.appendChild(heroDiv);
 });
 
+console.log(heroes);
