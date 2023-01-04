@@ -15,7 +15,11 @@ img {
 
 p {
     text-align: center;
-    font-size: larger;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-shadow: 0.04em 0 lightgray, 0 0.04em lightgray, -0.04em 0 lightgray, 0 -0.04em lightgray;
 }
 
 label {
@@ -43,12 +47,14 @@ input#rarity-string {
 }
 
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: url(https://static-cdn.jtvnw.net/ttv-boxart/AFK%20Arena.jpg);
     background-size: cover;
+    background-attachment: scroll;
+    z-index: -1;
   }
 
