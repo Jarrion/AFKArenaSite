@@ -14,4 +14,21 @@ p {
     text-align: center;
     font-size: larger;
 }
-
+label {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+button {
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+input#rarity-string {
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+}
