@@ -91,21 +91,19 @@ function generateHeroes() {
 
   const container = document.querySelector('.grid-container');
 
-  heroes.forEach((hero, index) => {
-  const heroDiv = document.createElement('div');
-  heroDiv.classList.add('hero');
-  heroDiv.style.backgroundColor = hero.color;
-  heroDiv.innerHTML = `
-    <img src='${hero.img}' alt='${hero.name}'>
-    <p>${hero.name}</p>
-  `;
-  container.appendChild(heroDiv);
+    heroes.forEach((hero, index) => {
+    const heroDiv = document.createElement('div');
+    heroDiv.classList.add('hero');
+    heroDiv.style.backgroundColor = hero.color;
+    heroDiv.innerHTML = `
+        <img src='${hero.img}' alt='${hero.name}'>
+        <p>${hero.name}</p>
+    `;
+    container.appendChild(heroDiv);
 
-});
+  });
 
 }
-
-console.log(heroes);
 
 const container = document.querySelector('.grid-container');
 
@@ -116,5 +114,3 @@ heroes.forEach((hero, index) => {
   heroDiv.innerHTML = `<img src='${hero.img}' alt='${hero.name}'><p>${hero.name}</p>`;
   container.appendChild(heroDiv);
 });
-
-console.log(heroes);
