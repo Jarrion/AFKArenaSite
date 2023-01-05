@@ -6,6 +6,12 @@
     margin-right: 10px;
 }
 
+@media (max-width: 900px) {
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
 img {
     display: block;
     margin-left: auto;
