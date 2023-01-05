@@ -32,12 +32,12 @@ function generateHeroes() {
         color = 'blue';
         break;
       case 'e':
-        rarity = 'epic';
+        rarity = 'elite';
         obtained = true;
         color = 'purple';
         break;
       case 'f':
-        rarity = 'epic+';
+        rarity = 'elite+';
         obtained = true;
         color = 'purple';
         break;
@@ -91,9 +91,9 @@ function generateHeroes() {
 
   const container = document.querySelector('.grid-container');
 
-    heroes.forEach((hero) => {
+    heroes.forEach((hero, index) => {
     const heroDiv = document.createElement('div');
-    heroDiv.classList.add('hero');
+    heroDiv.classList.add('hero', hero.rarity);
     heroDiv.style.backgroundColor = hero.color;
     heroDiv.innerHTML = `
         <img src='${hero.img}' alt='${hero.name}'>

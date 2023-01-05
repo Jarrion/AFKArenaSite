@@ -6,7 +6,7 @@
     margin-right: 10px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
     .grid-container {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -62,5 +62,45 @@ input#rarity-string {
     background-size: cover;
     background-attachment: scroll;
     z-index: -1;
+}
+
+
+.hero.rare {
+    border: 12px solid black;
   }
 
+.hero.rare\+ {
+    border: 12px solid gold;
+  }
+
+.hero.elite {
+    border: 12px solid black;
+  }
+
+.hero.elite\+ {
+    border: 12px solid gold;
+  }
+
+.hero.legendary {
+    border: 12px solid black;
+  }
+
+.hero.legendary\+ {
+    border: 12px solid gold;
+  }
+
+.hero.mythic {
+    border: 12px solid black;
+  }
+
+.hero.mythic\+ {
+    border: 12px solid gold;
+  }
+
+.hero.ascended {
+    border: 12px solid black;
+  }
+
+.hero.ascended\+ {
+    border: 12px solid gold;
+  }
