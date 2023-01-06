@@ -17,6 +17,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
+    border-radius: 50%;
 }
 
 p {
@@ -65,45 +66,56 @@ input#rarity-string {
     opacity: 0.3;
 }
 
+.hero {
+  border-radius: 8px;
+}
+
+.hero.unobtained {
+  border: 3px solid black;
+}
+
+.hero.common {
+  border: 3px solid black;
+}
 
 .hero.rare {
-    border: 12px solid black;
+    border: 10px solid black;
   }
 
 .hero.rare\+ {
-    border: 12px solid gold;
+    border: 10px solid gold;
   }
 
 .hero.elite {
-    border: 12px solid black;
+    border: 10px solid black;
   }
 
 .hero.elite\+ {
-    border: 12px solid gold;
+    border: 10px solid gold;
   }
 
 .hero.legendary {
-    border: 12px solid black;
+    border: 10px solid black;
   }
 
 .hero.legendary\+ {
-    border: 12px solid gold;
+    border: 10px solid gold;
   }
 
 .hero.mythic {
-    border: 12px solid black;
+    border: 10px solid black;
   }
 
 .hero.mythic\+ {
-    border: 12px solid gold;
+    border: 10px solid gold;
   }
 
 .hero.ascended {
-    border: 12px solid black;
+    border: 10px solid black;
   }
 
 .hero.ascended\+ {
-    border: 12px solid gold;
+    border: 10px solid gold;
   }
 
 
