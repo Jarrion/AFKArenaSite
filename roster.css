@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+button#generate-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div#rarity-string-div {
+    text-align: center;
+}
