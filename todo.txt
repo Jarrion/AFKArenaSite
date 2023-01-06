@@ -1,0 +1,9 @@
+After implementing functionality, work on these:
+
+Generating the array for heroes across multiple files is wasteful and could cause problems if one is not the same as the other, fix this
+
+The formatting for the roster.html page is terrible, move it into a grid similar to the index.html page at some point
+
+heroSelect.html is not used, implement the functionality or remove it altogether
+
+>>>Generally just clean up the JavaScript to look more professional
