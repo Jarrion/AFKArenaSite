@@ -10,4 +10,6 @@ Generating the rarityString is possible, but if you want to change one thing in 
 or manually re-enter every single hero with the single change. This is inefficient and time-wasting. 
 ---> Implement the ability to edit an existing rarityString
 
+Rework navbar to be reused across each page instead of having it individually added to each page
+
 >>>Generally just clean up the JavaScript to look more professional
