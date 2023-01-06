@@ -12,4 +12,6 @@ or manually re-enter every single hero with the single change. This is inefficie
 
 Rework navbar to be reused across each page instead of having it individually added to each page
 
+Save rarityString in browser cookies so that manual entry is not required after generating?
+
 >>>Generally just clean up the JavaScript to look more professional
