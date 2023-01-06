@@ -17,3 +17,16 @@ button#generate-button {
 div#rarity-string-div {
     text-align: center;
 }
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://static-cdn.jtvnw.net/ttv-boxart/AFK%20Arena.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+  z-index: -1;
+  opacity: 0.3;
+}
