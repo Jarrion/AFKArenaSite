@@ -15,6 +15,7 @@ img {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  border: 10px solid transparent;
 }
 button#generate-button {
   display: block;
@@ -36,6 +37,9 @@ div#rarity-string-div {
   background-attachment: scroll;
   z-index: -1;
   opacity: 0.3;
+}
+select {
+  margin-bottom: 8px;
 }
 
 

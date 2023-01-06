@@ -3,7 +3,7 @@ const heroNames = ['Belinda', 'Cecilia', 'Eluard', 'Estrilda', 'Fawkes', 'Gwynet
     const container = document.querySelector('.container');
     heroNames.forEach(name => {
       const hero = document.createElement('div');
-      hero.classList.add('hero', hero.img);
+      hero.classList.add('hero');
 
       const label = document.createElement('label');
       label.textContent = name;
@@ -14,7 +14,64 @@ const heroNames = ['Belinda', 'Cecilia', 'Eluard', 'Estrilda', 'Fawkes', 'Gwynet
       hero.appendChild(img);
 
       const select = document.createElement('select');
-      ['a - Unobtained','b - Common', 'c - Rare', 'd - Rare+','e - Epic', 'f - Epic+','g - Legendary','h - Legendary+','i - Mythic', 'j - Mythic+', 'k - Ascended', 'l - Ascended+'].forEach(rarity => {
+      select.addEventListener('change', event => {
+        const selectedOption = event.target.value;
+        const parentElement = event.target.parentElement;
+        
+        switch (selectedOption) {
+            case 'a - unobtained':
+                parentElement.style.backgroundColor = 'gray';
+                break;
+            case 'b - common':
+                parentElement.style.backgroundColor = 'green';
+                break;
+            case 'c - rare':
+                parentElement.style.backgroundColor = 'blue';
+                parentElement.style.borderColor = 'black';
+                break;
+            case 'd - rare+':
+                parentElement.style.backgroundColor = 'blue';
+                parentElement.style.borderColor = 'gold';
+                break;
+            case 'e - elite':
+                parentElement.style.backgroundColor = 'purple';
+                parentElement.style.borderColor = 'black';
+                break;
+            case 'f - elite+':
+                parentElement.style.backgroundColor = 'purple';
+                parentElement.style.borderColor = 'gold';
+                break;
+            case 'g - legendary':
+                parentElement.style.backgroundColor = 'orange';
+                parentElement.style.borderColor = 'black';
+                break;
+            case 'h - legendary+':
+                parentElement.style.backgroundColor = 'orange';
+                parentElement.style.borderColor = 'gold';
+                break;
+            case 'i - mythic':
+                parentElement.style.backgroundColor = 'red';
+                parentElement.style.borderColor = 'black';
+                break;
+            case 'j - mythic+':
+                parentElement.style.backgroundColor = 'red';
+                parentElement.style.borderColor = 'gold';
+                break;
+            case 'k - ascended':
+                parentElement.style.backgroundColor = 'white';
+                parentElement.style.borderColor = 'black';
+                break;
+            case 'l - ascended+':
+                parentElement.style.backgroundColor = 'white';
+                parentElement.style.borderColor = 'gold';
+                break;
+            default:
+                console.log(`Selected option: ${selectedOption}`);
+                parentElement.style.backgroundColor = 'gray';
+                break;
+        }
+      });
+      ['a - Unobtained','b - Common', 'c - Rare', 'd - Rare+','e - Elite', 'f - Elite+','g - Legendary','h - Legendary+','i - Mythic', 'j - Mythic+', 'k - Ascended', 'l - Ascended+'].forEach(rarity => {
         const option = document.createElement('option');
         option.value = rarity.toLowerCase();
         option.textContent = rarity;
