@@ -137,7 +137,7 @@ function sortHeroes() {
   });
 
   sortedHeroDivs.forEach((div) => {
-    document.body.appendChild(div);
+    container.appendChild(div);
   });
 
 
