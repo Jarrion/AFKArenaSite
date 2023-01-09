@@ -1,7 +1,5 @@
 After implementing functionality, work on these:
 
-More elegant solution than generating the hero array in both generateHeroes and generateRarityString separately, could cause issues with one being updated and the other not, fix this
-
 heroSelect.html is not used, implement the functionality or remove it altogether
 
 >>>Generally just clean up the JavaScript to look more professional
@@ -21,3 +19,5 @@ Rework navbar to be reused across each page instead of having it individually ad
 Save rarityString in browser cookies so that manual entry is not required after generating?
 
 Replace onclick with event listeners
+
+More elegant solution than generating the hero array in both generateHeroes and generateRarityString separately, could cause issues with one being updated and the other not, fix this
