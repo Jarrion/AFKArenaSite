@@ -19,67 +19,67 @@ function generateHeroes() {
 
     switch (rarityString[i % rarityString.length]) {
       case 'a':
-        rarity = 'unobtained';
+        rarity = 'a_unobtained';
         obtained = false;
         color = 'gray';
         break;
       case 'b':
-        rarity = 'common';
+        rarity = 'b_common';
         obtained = true;
         color = 'green';
         break;
       case 'c':
-        rarity = 'rare';
+        rarity = 'c_rare';
         obtained = true;
         color = 'blue';
         break;
       case 'd':
-        rarity = 'rare+';
+        rarity = 'd_rare+';
         obtained = true;
         color = 'blue';
         break;
       case 'e':
-        rarity = 'elite';
+        rarity = 'e_elite';
         obtained = true;
         color = 'purple';
         break;
       case 'f':
-        rarity = 'elite+';
+        rarity = 'f_elite+';
         obtained = true;
         color = 'purple';
         break;
       case 'g':
-        rarity = 'legendary';
+        rarity = 'g_legendary';
         obtained = true;
         color = 'orange';
         break;
       case 'h':
-        rarity = 'legendary+';
+        rarity = 'h_legendary+';
         obtained = true;
         color = 'orange';
         break;
       case 'i':
-        rarity = 'mythic';
+        rarity = 'i_mythic';
         obtained = true;
         color = 'red';
         break;
       case 'j':
-        rarity = 'mythic+';
+        rarity = 'j_mythic+';
         obtained = true;
         color = 'red';
         break;
       case 'k':
-        rarity = 'ascended';
+        rarity = 'k_ascended';
         obtained = true;
         color = 'white';
         break;
       case 'l':
-        rarity = 'ascended+';
+        rarity = 'l_ascended+';
         obtained = true;
         color = 'white';
         break;
       default:
-        rarity = 'unobtained';
+        rarity = 'a_unobtained';
         obtained = false;
         color = 'gray';
         break;
@@ -104,6 +104,8 @@ function generateHeroes() {
     container.appendChild(heroDiv);
   });
 
+
+
 }
 
 //This function is used to allow the user to take a string that they have on hand and set the rarityString value saved in cookies to their entered string
@@ -111,6 +113,34 @@ function manualStringEntry(){
   const rarityString = document.getElementById('rarity-string').value;
   setCookie("rarityStringCookie", rarityString);
   alert(`Cookie set to ${rarityString}`);
+}
+
+function sortHeroes() {
+  //Get all divs with the hero class
+  const heroDivs = document.querySelectorAll('div.hero');
+
+  //Sort the divs by their rarity class
+  const sortedHeroDivs = [...heroDivs].sort((a, b) => {
+
+    //The rarity of each div is shown by its second class i.e. <div class="hero j_mythic+" .......
+    //The first character of the class to indicate rarity is the character used for that rarity when reading the rarityString
+    //As the rarities are used in order and the letters are use in alphabetical order, you can sort divs by rarity by alphabetically sorting each div by its second class
+    const rarityA = a.classList[1];
+    const rarityB = b.classList[1];
+    if (rarityA < rarityB) {
+      return 1;
+    } else if (rarityA > rarityB) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+
+  sortedHeroDivs.forEach((div) => {
+    document.body.appendChild(div);
+  });
+
+
 }
 
 //Add event listener to the Generate Heroes button so that it can use the generateHeroes function

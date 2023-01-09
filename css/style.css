@@ -70,51 +70,51 @@ input#rarity-string {
   border-radius: 8px;
 }
 
-.hero.unobtained {
+.hero.a_unobtained {
   border: 3px solid black;
 }
 
-.hero.common {
+.hero.b_common {
   border: 3px solid black;
 }
 
-.hero.rare {
+.hero.c_rare {
     border: 10px solid black;
   }
 
-.hero.rare\+ {
+.hero.d_rare\+ {
     border: 10px solid gold;
   }
 
-.hero.elite {
+.hero.e_elite {
     border: 10px solid black;
   }
 
-.hero.elite\+ {
+.hero.f_elite\+ {
     border: 10px solid gold;
   }
 
-.hero.legendary {
+.hero.g_legendary {
     border: 10px solid black;
   }
 
-.hero.legendary\+ {
+.hero.h_legendary\+ {
     border: 10px solid gold;
   }
 
-.hero.mythic {
+.hero.i_mythic {
     border: 10px solid black;
   }
 
-.hero.mythic\+ {
+.hero.j_mythic\+ {
     border: 10px solid gold;
   }
 
-.hero.ascended {
+.hero.k_ascended {
     border: 10px solid black;
   }
 
-.hero.ascended\+ {
+.hero.l_ascended\+ {
     border: 10px solid gold;
   }
 
