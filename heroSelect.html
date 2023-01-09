@@ -8,16 +8,12 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel='stylesheet' href='css/style.css'>
   </head>
-  <body>
+  <body onload="insertNavbar()">
     <div class="background"></div>
-    <div class="navbar">
-      <a href="index.html">Code Entry</a>
-      <a href="roster.html">Code Generation</a>
-      <a href="heroSelect.html">Details</a>
-    </div>
-      
-	<div>Welcome to the unofficial AFK Arena roster sharing webpage!</div>
+    <div class="navbar" id="navbar"></div>    
+	  <div>Welcome to the unofficial AFK Arena roster sharing webpage!</div>
     <div>The goal of this webpage is to allow people to easy generate a code that they can share with others so that people can see their full hero rosters without needing to share images</div>
     <div>Additionally, this website will implement functionality that will allow for users to search indivdual levels on each stage to see completions that use rosters they are currently capable of making</div>
   </body>
+  <script src='scripts/navbar.js'></script>
 </html>

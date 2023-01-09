@@ -6,12 +6,9 @@
   <link rel="icon" href="images/favicon.ico">
   <link rel='stylesheet' href='css/roster.css'>
 </head>
-<body>
+<body onload="insertNavbar()">
   <div class="background"></div>
-  <div class="navbar">
-    <a href="index.html">Code Entry</a>
-    <a href="roster.html">Code Generation</a>
-    <a href="heroSelect.html">Details</a>
+  <div class="navbar" id="navbar">
   </div>
   <div class='stored-string' id='stored-string'></div>
   <form class="container">
@@ -19,6 +16,7 @@
   <div id="rarity-string-div" contentEditable="false">No String Generated Yet</div>  
   <button id="generate-button">Generate Rarity String</button>
   <button id="load-rarity">Load existing string</button>
+  <script src='scripts/navbar.js'></script>
   <script src='scripts/cookies.js'></script>
   <script src='scripts/generateRarityString.js'></script>
 </body>

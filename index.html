@@ -8,11 +8,9 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel='stylesheet' href='css/style.css'>
   </head>
-  <body>
-    <div class="navbar">
-      <a href="index.html">Code Entry</a>
-      <a href="roster.html">Code Generation</a>
-      <a href="heroSelect.html">Details</a>
+  <body onload="insertNavbar()">
+    <div class="navbar" id="navbar">
+      
     </div>
     <div class="background"></div>
     <div class='stored-string' id='stored-string'></div>
@@ -24,6 +22,7 @@
       </form>
       <div class='grid-container' id='grid-container'></div>
   </body>
+  <script src='scripts/navbar.js'></script>
   <script src='scripts/cookies.js'></script>
   <script src='scripts/generateHeroes.js'></script>
 </html>
