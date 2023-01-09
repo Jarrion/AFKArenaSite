@@ -2,7 +2,8 @@ const heroes = [];
 const heroNames = ['Belinda', 'Cecilia', 'Eluard', 'Estrilda', 'Fawkes', 'Gwyneth', 'Hendrik', 'Lucius', 'Morrow', 'Oscar', 'Peggy', 'Raine', 'Rigby', 'Rosaline', 'Rowan', 'Scarlet', 'Thane', 'Walker', 'Angelo', 'Hogan', 'Mirael', 'Morvus', 'Merek', 'Ulric', 'Alaro', 'Anoki', 'Antandra', 'Brutus', 'Drez', 'Granit', 'Khasos', 'Kren', 'Numisu', 'Safiya', 'Satrana', 'Skreg', 'Skriath', 'Thali', 'Thesku', 'Tidus', 'Vurk', 'Warek', 'Ankhira', 'Golus', 'Saveas', 'Arkadios', 'Bloodsnarl', 'Baden', 'Daimon', 'Desira', 'Fane', 'Ferael', 'Grezhul', 'Hodgkin', 'Isabella', 'Izold', 'Kelthur', 'Nara', 'Oden', 'Silas', 'Shemira', 'Theowyn', 'Thoran', 'Torne', 'Treznor', 'Niru', 'Silvina', 'Vedan', 'Sezis', 'Steixius', 'Astar', 'Eironn', 'Gorvo', 'Kaz', 'Lorsan', 'Lyca', 'Mishka', 'Nemora', 'Pippa', 'Raku', 'Respen', 'Saurus', 'Seirus', 'Solise', 'Tasi', 'Ulmus', 'Arden', 'Ira', 'Ogi', 'Oku', 'Dreaf', 'Eletha', 'Alna', 'Athalia', 'Audrae', 'Twins', 'Flora', 'Haelus', 'Morael', 'Orthros', 'Talene', 'ATalene', 'Titus', 'WuKong', 'Zaphrael', 'Ezizh', 'AEzizh', 'Framton', 'Khazard', 'Leofric', 'Lucretia', 'Mehira', 'Mezoth', 'Mortas', 'Zikis', 'Zolrath', 'Ainz', 'Albedo', 'Arthur', 'Ezio', 'Joker', 'Leonardo', 'Melusina', 'Merlin', 'Nakoruru', 'PoPersia', 'Queen', 'Ukyo'];
 const storedString = document.querySelector('#stored-string');
 const container = document.querySelector('.grid-container');
-
+const heroGeneration = document.querySelector('#generate-heroes');
+const manualEntry = document.querySelector('#manual-string-entry');
 
 let cookieValue = getCookie("rarityStringCookie");
 storedString.textContent = `Currently stored string: ${cookieValue}`;
@@ -96,18 +97,12 @@ function generateHeroes() {
     heroes.push(hero);
   }
 
-  
-
     heroes.forEach((hero) => {
     const heroDiv = document.createElement('div');
     heroDiv.classList.add('hero', hero.rarity);
     heroDiv.style.backgroundColor = hero.color;
-    heroDiv.innerHTML = `
-        <img src='${hero.img}' alt='${hero.name}'>
-        <p>${hero.name}</p>
-    `;
+    heroDiv.innerHTML = `<img src='${hero.img}' alt='${hero.name}'><p>${hero.name}</p>`;
     container.appendChild(heroDiv);
-
   });
 
 }
@@ -118,4 +113,10 @@ function manualStringEntry(){
   setCookie("rarityStringCookie", rarityString);
   alert(`Cookie set to ${rarityString}`);
 }
+
+//Add event listener to the Generate Heroes button so that it can use the generateHeroes function
+heroGeneration.addEventListener('click', generateHeroes);
+
+//Add event listener to the Manual String Entry button so that it can use the manualStringEntry function
+manualEntry.addEventListener('click', manualStringEntry);
 
