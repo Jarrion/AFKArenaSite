@@ -162,12 +162,14 @@ const changeEvent = new Event('change');
               select.selectedIndex = 11;
               break;
           }
+
+          //Dispatch a change event to update the hero's border and background coloring to the appropriate rarity
           select.dispatchEvent(changeEvent)
         }
       }
 
       //Add an event listener to the generate button so it can use the generateRarityString function
       generateButton.addEventListener('click', generateRarityString);
-      
+
       //Add an event listener to the load rarity button so it can use the setRarityOptions function
       loadRarity.addEventListener('click', setRarityOptions);
