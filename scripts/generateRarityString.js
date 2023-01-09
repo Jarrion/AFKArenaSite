@@ -83,7 +83,9 @@ const changeEvent = new Event('change');
                 break;
         }
       });
-      ['a - Unobtained','b - Common', 'c - Rare', 'd - Rare+','e - Elite', 'f - Elite+','g - Legendary','h - Legendary+','i - Mythic', 'j - Mythic+', 'k - Ascended', 'l - Ascended+'].forEach(rarity => {
+      
+      ['a - Unobtained','b - Common', 'c - Rare', 'd - Rare+','e - Elite', 'f - Elite+','g - Legendary','h - Legendary+','i - Mythic', 'j - Mythic+', 'k - Ascended', 'l - Ascended+']
+      .forEach(rarity => {
         const option = document.createElement('option');
         option.value = rarity.toLowerCase();
         option.textContent = rarity;
