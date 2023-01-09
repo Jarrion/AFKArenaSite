@@ -118,7 +118,9 @@ input#rarity-string {
     border: 10px solid gold;
   }
 
-
+div#stored-string {
+    text-align: center;
+  }
 
 
 
