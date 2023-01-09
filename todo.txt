@@ -1,6 +1,6 @@
 After implementing functionality, work on these:
 
-heroSelect.html is not used, implement the functionality or remove it altogether
+Add some form of sorting so that heroes are displayed in order of rarity when entering a code on the code entry page
 
 >>>Generally just clean up the JavaScript to look more professional
 
@@ -21,3 +21,5 @@ Save rarityString in browser cookies so that manual entry is not required after 
 Replace onclick with event listeners
 
 More elegant solution than generating the hero array in both generateHeroes and generateRarityString separately, could cause issues with one being updated and the other not, fix this
+
+heroSelect.html is not used, implement some form of functionality or remove it altogether
