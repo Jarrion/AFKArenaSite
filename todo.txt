@@ -8,7 +8,7 @@ heroSelect.html is not used, implement the functionality or remove it altogether
 
 Generating the rarityString is possible, but if you want to change one thing in the string, you would need to either remember the specific point that a given hero is located at in the string,
 or manually re-enter every single hero with the single change. This is inefficient and time-wasting. 
----> Implement the ability to edit an existing rarityString
+---> Implement the ability to edit an existing rarityString, make string generation page automatically load stored string in cookies
 
 Rework navbar to be reused across each page instead of having it individually added to each page
 
