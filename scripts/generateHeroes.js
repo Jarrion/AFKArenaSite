@@ -8,8 +8,19 @@ let cookieValue = getCookie("rarityStringCookie");
 storedString.textContent = `Currently stored string: ${cookieValue}`;
 
 //Function to generate cards for each hero and in the heroNames array and properly color them based on their rarity
-function generateHeroes() {
-  const rarityString = document.getElementById('rarity-string').value;
+function generateHeroes(hideUnobtained = false, stringValue = 'default') {
+  let rarityString;
+  
+  //If the value for stringValue is left default then it means no value was specifically passed to this function
+  //A specific value for stringValue will be passed when loading stageStrings from stageStrings.js to display successful hero formations for each stage
+  if (stringValue === 'default') {
+    rarityString = document.getElementById('rarity-string').value;
+  }
+  else {
+    rarityString = stringValue;
+  }
+
+  
   const numHeroes = rarityString.length;
 
   for (let i = 0; i < numHeroes; i++) {
@@ -96,6 +107,16 @@ function generateHeroes() {
     heroes.push(hero);
   }
 
+  //If hideUnobtained is changed to true, then remove all heroes with a rarity of a_unobtained
+  if (hideUnobtained === true) { 
+    for(let i = 0; i < heroes.length; i++){
+      if(heroes[i].rarity === "a_unobtained"){
+          heroes.splice(i, 1)
+          i--;
+      }
+    }
+  }
+
     heroes.forEach((hero) => {
     const heroDiv = document.createElement('div');
     heroDiv.classList.add('hero', hero.rarity);
@@ -144,8 +165,8 @@ function sortHeroes() {
 }
 
 //Add event listener to the Generate Heroes button so that it can use the generateHeroes function
-heroGeneration.addEventListener('click', generateHeroes);
+//heroGeneration.addEventListener('click', generateHeroes);
 
 //Add event listener to the Manual String Entry button so that it can use the manualStringEntry function
-manualEntry.addEventListener('click', manualStringEntry);
+//manualEntry.addEventListener('click', manualStringEntry);
 
