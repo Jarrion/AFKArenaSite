@@ -165,8 +165,13 @@ function sortHeroes() {
 }
 
 //Add event listener to the Generate Heroes button so that it can use the generateHeroes function
-//heroGeneration.addEventListener('click', generateHeroes);
+if(heroGeneration) {
+  heroGeneration.addEventListener('click', generateHeroes);
+}
+
 
 //Add event listener to the Manual String Entry button so that it can use the manualStringEntry function
-//manualEntry.addEventListener('click', manualStringEntry);
+if (manualEntry) {
+  manualEntry.addEventListener('click', manualStringEntry);
+}
 
