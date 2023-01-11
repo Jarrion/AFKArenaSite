@@ -13,7 +13,12 @@ function generateHeroes(hideUnobtained = false, stringValue = 'default') {
   
   //If the value for stringValue is left default then it means no value was specifically passed to this function
   //A specific value for stringValue will be passed when loading stageStrings from stageStrings.js to display successful hero formations for each stage
+  console.log(stringValue);
+  console.log(rarityString);
   if (stringValue === 'default') {
+    console.log('inside if statement for stringvalue === default');
+    console.log(stringValue);
+    console.log(rarityString);
     rarityString = document.getElementById('rarity-string').value;
   }
   else {
@@ -134,6 +139,12 @@ function manualStringEntry(){
   const rarityString = document.getElementById('rarity-string').value;
   setCookie("rarityStringCookie", rarityString);
   alert(`Cookie set to ${rarityString}`);
+}
+
+function grabFormation() {
+  const ChapterStageValue = document.getElementById('stage-string').value;
+  console.log(window[ChapterStageValue]);
+  generateHeroes(true, stringValue = window[ChapterStageValue]);
 }
 
 function sortHeroes() {
